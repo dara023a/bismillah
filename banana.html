@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mata Kuliah</title>
+
+  <!-- Favicon & Font -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Gaya untuk GIF dan elemen lain -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      background-color: #6200ea;
+      padding: 1em;
+      text-align: center;
+    }
+
+    .nav-btn {
+      color: white;
+      text-decoration: none;
+      margin: 0 1em;
+      font-weight: bold;
+    }
+
+    .current {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 2em;
+      max-width: 700px;
+      margin: auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 2em;
+    }
+
+    .matkul-list ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .matkul-list li {
+      margin-bottom: 1em;
+    }
+
+    .encouragement {
+      font-weight: bold;
+      color: #4caf50;
+    }
+
+    /* GIF melayang */
+    #gifMelayang {
+      position: fixed;
+      top: 60%;
+      left: 50%;
+      width: 120px;
+      transform: translate(-50%, 0);
+      cursor: pointer;
+      z-index: 9999;
+      transition: opacity 0.3s ease;
+    }
+
+    .hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .dragging {
+      cursor: grabbing;
+    }
+  </style>
+</head>
+<body class="matkul-page">
+
+  <!-- Navigasi -->
+  <header class="navbar">
+    <nav>
+      <a href="index.html" class="nav-btn">Tebak!</a>
+      <a href="kalkulator.html" class="nav-btn">Kalkulator IPK</a>
+      <a href="matkul.html" class="nav-btn current">Mata Kuliah</a>
+    </nav>
+  </header>
+
+  <!-- Konten utama -->
+  <div class="container matkul-container">
+    <h1>Mata Kuliah di IF</h1>
+    <p>Semangat yaa buat ngebantai mata kuliah di semester selanjutnya!</p>
+
+    <div class="matkul-list">
+      <ul>
+        <li><strong>Basis Data</strong> (3 SKS) - Fokus pada SQL & desain database</li>
+        <li><strong>Pemrograman Web Lanjut</strong> (4 SKS) - Belajar framework modern</li>
+        <li><strong>Struktur Data & Algoritma</strong> (3 SKS) - Penting untuk logika pemrograman</li>
+        <li><strong>Jaringan Komputer</strong> (3 SKS) - Memahami dasar-dasar networking</li>
+        <li><strong>Etika Profesi</strong> (2 SKS) - Pembentukan karakter profesional</li>
+      </ul>
+    </div>
+    <p class="encouragement">Bismillah bisa lewatin semua dan lancar selalu, aamiin!</p>
+  </div>
+
+  <!-- GIF melayang -->
+  <img src="balon.hehe.webp" id="gifMelayang" alt="GIF Melayang" />
+
+  <!-- Script animasi & interaksi -->
+  <script>
+    const gif = document.getElementById('gifMelayang');
+    let floatOffset = 0;
+    let direction = -1;
+
+    function animateFloat() {
+      floatOffset += direction;
+      if (floatOffset <= -20 || floatOffset >= 0) direction *= -1;
+      gif.style.transform = `translate(-50%, ${floatOffset}px)`;
+      requestAnimationFrame(animateFloat);
+    }
+
+    animateFloat();
+
+    // Drag logic
+    let isDragging = false;
+    let offsetX = 0, offsetY = 0;
+
+    gif.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      gif.classList.add("dragging");
+
+      const rect = gif.getBoundingClientRect();
+      offsetX = e.clientX - rect.left;
+      offsetY = e.clientY - rect.top;
+
+      gif.style.transform = "none"; // reset animasi sementara
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      if (isDragging) {
+        gif.style.left = `${e.clientX - offsetX}px`;
+        gif.style.top = `${e.clientY - offsetY}px`;
+      }
+    });
+
+    document.addEventListener("mouseup", () => {
+      if (isDragging) {
+        isDragging = false;
+        gif.classList.remove("dragging");
+
+        // Reset posisi animasi dari posisi baru
+        floatOffset = 0;
+        direction = -1;
+      }
+    });
+
+    gif.addEventListener("click", () => {
+      if (isDragging) return;
+
+      Swal.fire({
+        title: 'Yah kamu keganggu ya sama aku terbang? 😅',
+        text: 'Mau aku tetap melayang atau ngilang nih?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Tetap Aja 😎',
+        cancelButtonText: 'Ngilang Aja 😪',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.dismiss === Swal.DismissReason.cancel) {
+          gif.classList.add("hidden");
+          setTimeout(() => gif.style.display = "none", 500);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

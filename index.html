@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Kamu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="main-page">
+    <header class="navbar" style="display: none;">
+        <nav>
+            <a href="index.html" class="nav-btn current">Tebak!</a>
+            <a href="kalkulator.html" class="nav-btn">Kalkulator IPK</a>
+            <a href="matkul.html" class="nav-btn">Mata Kuliah</a>
+        </nav>
+    </header>
+
+    <div class="container login-container" id="loginSection">
+        <h1>Gatau yaa isinya apa, coba masuk duluuu!</h1>
+        <p>Masukkin username dan password yg udh aku kasih yaa ^^</p>
+        <div class="input-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <button id="loginBtn" class="btn">Masuk</button>
+    </div>
+
+    <div class="container celebration-container" id="celebrationSection" style="display: none;">
+        <h1 id="celebrationText" class="animated-text"></h1>
+        <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique interdum convallis. Nulla consequat euismod lectus. Cras iaculis accumsan ultricies. Suspendisse sed dui lorem. Quisque nec quam sed justo condimentum fringilla. Integer bibendum dapibus sapien non efficitur. Aliquam nec libero a dolor vulputate congue id et mauris. Morbi tristique risus quis metus gravida, ut tincidunt lorem mattis. Proin sit amet neque eu nisl dapibus malesuada ut ac arcu. Nam lacinia, quam quis euismod placerat, massa purus feugiat lectus, vitae iaculis magna lacus vel urna. Donec molestie elit sit amet lacus pharetra, id scelerisque nisi imperdiet. Maecenas aliquet id purus tincidunt faucibus. Vivamus libero ipsum, mattis ac dolor ut, tincidunt lobortis justo. Nullam cursus efficitur ligula dapibus porta. Phasellus tincidunt ante sit amet elementum ultrices. In a enim rutrum, luctus ex eget, fringilla lorem.
+
+Nulla pharetra, ex quis congue facilisis, nulla est accumsan leo, id pharetra quam turpis eget justo. Duis vulputate urna augue, a faucibus justo pellentesque non. Morbi et sapien sem. Duis quis dignissim nulla, quis rhoncus felis. Etiam a facilisis lacus, et placerat leo. Vivamus nisi sem, commodo nec sollicitudin id, facilisis sagittis velit. Suspendisse vel felis ut lacus congue pharetra ut et purus. Integer luctus in enim vitae commodo. Sed dignissim risus vitae dui pharetra convallis. Cras nec dignissim urna. In consectetur id nunc id consequat. Pellentesque ornare enim id sem ultrices ultricies. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin fermentum aliquam ipsum sit amet consectetur. Donec varius urna vitae felis placerat, nec lobortis dui euismod. Quisque nec quam ac nisl pretium posuere id vel nunc.
+
+Nulla facilisi. Donec ullamcorper interdum arcu vel mattis. Nulla malesuada elit at felis semper, ac consequat est tempus. Fusce vitae elit eu libero consequat mollis sed nec lacus. Vivamus suscipit erat in ligula feugiat ullamcorper. Praesent dignissim dui a lorem varius, in facilisis augue auctor. Sed convallis consectetur turpis. Phasellus lobortis, eros id cursus vulputate, turpis lorem accumsan turpis, eu consectetur magna mauris at lectus. Donec consequat pretium ex in luctus. Curabitur ac sapien aliquam, pellentesque ante eu, ullamcorper tortor. Integer condimentum dolor id neque congue hendrerit. In ipsum libero, lobortis vel erat id, interdum pulvinar nisi. Cras sit amet viverra erat. Vivamus quis urna convallis lacus sagittis hendrerit a sed leo.
+
+Nulla sollicitudin sed augue in pretium. Donec viverra, libero in dictum lobortis, augue nisl luctus nulla, in volutpat eros massa et nisl. Etiam diam risus, euismod non sagittis eu, fermentum ut velit. Nam ut ipsum massa. Fusce sed viverra est. Mauris vitae sagittis mi, sodales eleifend dui. In ullamcorper gravida nisl eu ultrices. Nunc egestas tristique massa, ac finibus velit. Vestibulum ullamcorper iaculis nisl ut venenatis. Mauris eget sollicitudin mauris. Aliquam a metus augue. Vivamus dapibus maximus metus a porttitor. Sed laoreet fringilla finibus. Pellentesque sed augue urna. Aenean et arcu eget tellus commodo volutpat vitae vitae metus. Mauris sed risus purus.
+
+Quisque enim nisi, consequat nec ullamcorper vel, porttitor et arcu. Nullam ultrices ultricies mauris, ac placerat lacus vehicula et. Vivamus dignissim mauris urna, a pharetra est iaculis ut. Proin malesuada sapien nec facilisis efficitur. Curabitur ac ante id lorem porta tristique. Nam eget congue nibh. Ut sit amet dolor vitae nibh imperdiet condimentum. Cras sit amet arcu ante. Phasellus sit amet eros lorem. Nullam ac augue eget mi venenatis dapibus. Vestibulum quis lacinia felis. Etiam eleifend ante et eros faucibus, eget finibus sapien pellentesque. Aenean eget tortor vel metus molestie consequat. Vestibulum lobortis dolor nec facilisis sagittis. Mauris venenatis ut ligula in consectetur.
+
+Generated 5 paragraphs, 583 words, 3936 bytes of Lorem Ipsum</p>
+        <div class="gif-container">
+            <img src="hehe.gif" alt="Kucing Menari" class="cute-gif">
+        </div>
+        <button id="logoutBtn" class="btn">Logout</button>
+        <audio id="meowSound" src="assets/sounds/meow.mp3" preload="auto"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

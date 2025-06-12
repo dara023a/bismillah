@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="calculator-page">
+    <header class="navbar">
+        <nav>
+            <a href="index.html" class="nav-btn" id="ucapanNavBtn">Tebak!</a>
+            <a href="kalkulator.html" class="nav-btn current">Kalkulator IPK</a>
+            <a href="matkul.html" class="nav-btn">Mata Kuliah</a>
+        </nav>
+    </header>
+
+    <div class="container calculator-container">
+        <h1>Kalkulator IP & IPK</h1>
+        <p>Alternatif selain kalkulator hp dan udh disertain matkul sama sksnya ෆ⁠╹⁠ ⁠.̮⁠ ⁠╹⁠ෆ
+</p>
+
+        <div id="semestersContainer">
+            </div>
+
+        <button id="addSemesterBtn" class="btn add-btn">Tambah Semester</button>
+        <button id="calculateAllBtn" class="btn calculate-btn">Hitung IP & IPK </button>
+
+        <div class="results">
+            <div id="semesterIPResults">
+                </div>
+            <p>IPK: <span id="ipkResult">-</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
