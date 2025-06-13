@@ -269,6 +269,124 @@ p {
     transform: scale(1.05);
 }
 
+/* Gaya untuk Bagian Dosen KK */
+.dosen-kk-section {
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.dosen-kk-header {
+    background-color: #a766cc;
+    color: white;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 1px solid #9450b7;
+    transition: background-color 0.2s ease;
+}
+
+.dosen-kk-header:hover {
+    background-color: #9254b3;
+}
+
+.dosen-kk-header .dropdown-icon {
+    transition: transform 0.3s ease;
+    font-size: 0.8em;
+}
+
+.dosen-kk-header.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dosen-kk-content {
+    padding: 1em 1.5em;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.dosen-kk-content.show {
+    max-height: 1200px; /* Tingkatkan max-height karena ada foto */
+    padding: 1em 1.5em;
+}
+
+.dosen-kk-content h3 {
+    margin-top: 1.5em; /* Lebih banyak ruang di atas judul KK */
+    margin-bottom: 1em; /* Lebih banyak ruang di bawah judul KK */
+    color: #4a4a4a;
+    font-size: 1.3em; /* Sedikit lebih besar */
+    text-align: center; /* Judul KK di tengah */
+}
+
+/* Flexbox untuk Daftar Dosen */
+.dosen-list {
+    display: flex;
+    flex-wrap: wrap; /* Izinkan item untuk membungkus ke baris berikutnya */
+    gap: 20px; /* Jarak antar kartu dosen */
+    justify-content: center; /* Pusatkan kartu dosen saat merentang */
+    margin-bottom: 2em; /* Jarak antara daftar KK yang berbeda */
+}
+
+.dosen-card {
+    flex: 1 1 280px; /* Flex-grow, flex-shrink, flex-basis */
+    /* Ini berarti:
+       - grow (1): Akan tumbuh memenuhi ruang
+       - shrink (1): Akan menyusut jika ruang sempit
+       - basis (280px): Ukuran dasar item. Jika ruang kurang dari 280px, akan menyusut. Jika lebih, akan mencoba mencapai 280px.
+         Pada layar kecil, ini akan mendorong kartu ke baris baru jika lebar layar < 280px + gap.
+    */
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    display: flex; /* Aktifkan flexbox di dalam card untuk mengatur foto dan info */
+    flex-direction: column; /* Susun item secara vertikal */
+    align-items: center; /* Pusatkan item secara horizontal */
+}
+
+.dosen-foto {
+    width: 120px; /* Ukuran foto */
+    height: 120px;
+    border-radius: 50%; /* Membuat foto menjadi bulat */
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa terdistorsi */
+    margin-bottom: 15px;
+    border: 3px solid #6200ea; /* Border di sekitar foto */
+}
+
+.dosen-info h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.dosen-info p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.3;
+}
+
+.dosen-kk-content .note {
+    font-size: 0.9em;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    margin-top: 1.5em;
+    border-top: 1px dashed #eee;
+    padding-top: 1em;
+}
+
 /* --- Calculator Page Styles --- */
 .calculator-page {
     background: linear-gradient(135deg, var(--background-light) 0%, var(--accent-light) 100%);
@@ -285,26 +403,80 @@ p {
     color: var(--text-dark);
 }
 
-#semestersContainer {
-    margin-top: 30px;
-    width: 100%; /* Take full width of container */
+.semester-section {
+    margin-bottom: 1.5em;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* Penting untuk menyembunyikan overflow saat transisi */
 }
 
-.semester-group {
-    background-color: #F8F8FF; /* Ghost White */
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 25px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+.semester-header {
+    background-color: #f0f0f0;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0; /* Garis pemisah */
+    transition: background-color 0.2s ease;
 }
 
-.semester-group h2 {
-    color: var(--secondary-light);
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    text-align: left;
+.semester-header:hover {
+    background-color: #e5e5e5;
+}
+
+.semester-header.active {
+    background-color: #d0d0d0; /* Warna saat aktif */
+}
+
+.dropdown-icon {
+    transition: transform 0.3s ease;
+    font-size: 0.8em;
+}
+
+.semester-header.active .dropdown-icon {
+    transform: rotate(180deg); /* Panah berputar saat aktif */
+}
+
+.semester-content {
+    padding: 1em 1.5em;
+    background-color: white;
+    max-height: 0; /* Awalnya tersembunyi */
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* Transisi untuk buka/tutup */
+}
+
+.semester-content.show {
+    max-height: 500px; /* Cukup besar untuk menampilkan semua konten. Sesuaikan jika perlu */
+    padding: 1em 1.5em; /* Pastikan padding kembali */
+}
+
+/* Gaya untuk keterangan mata kuliah yang bisa diambil di semester bawah */
+.keterangan-tambahan {
+    font-size: 0.9em;
+    color: #6a6a6a;
+    font-style: italic;
+    margin-left: 0.5em;
+}
+
+.materi-link {
+    margin-top: 1.5em;
+    padding-top: 1em;
+    border-top: 1px dashed #e0e0e0;
+    text-align: center;
+}
+
+.materi-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.materi-link a:hover {
+    text-decoration: underline;
 }
 
 .courses-grid {
