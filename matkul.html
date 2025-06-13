@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mata Kuliah</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- SweetAlert2 CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="hehe4.gif" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="matkul-page">
     <header class="navbar">
@@ -23,17 +22,338 @@
         <h1>Mata Kuliah di IF</h1>
         <p>Semangat yaa buat ngebantai mata kuliah di semester selanjutnya!</p>
 
-        <div class="matkul-list">
-            <ul>
-                <li><strong>Basis Data</strong> (3 SKS) - Fokus pada SQL & desain database</li>
-                <li><strong>Pemrograman Web Lanjut</strong> (4 SKS) - Belajar framework modern</li>
-                <li><strong>Struktur Data & Algoritma</strong> (3 SKS) - Penting untuk logika pemrograman</li>
-                <li><strong>Jaringan Komputer</strong> (3 SKS) - Memahami dasar-dasar networking</li>
-                <li><strong>Etika Profesi</strong> (2 SKS) - Pembentukan karakter profesional</li>
-            </ul>
+        <div class="semester-section">
+            <h2 class="semester-header" data-semester="1">
+                Semester 1
+                <span class="dropdown-icon">&#9660;</span> </h2>
+            <div class="semester-content" id="semester-1-content">
+                <div class="matkul-list">
+                    <ul>
+                        <li><strong>Kalkulus I</strong> (3 SKS)</li>
+                        <li><strong>Dasar Pemrograman</strong> (3 SKS)</li>
+                        <li><strong>Logika Informatika</strong> (3 SKS)</li>
+                        <li><strong>Literasi Teknologi Informasi</strong> (2 SKS)</li>
+                        <li><strong>Pancasila</strong> (2 SKS)</li>
+                        <li><strong>Bahasa Indonesia</strong> (2 SKS)</li>
+                        <li><strong>Kewirausahaan</strong> (2 SKS)</li>
+                        <li><strong>Bahasa Inggris</strong> (2 SKS)</li>
+                    </ul>
+                </div>
+                <p>Tidak ada prasyarat untuk semua mata kuliah di semester 1.</p>
+                <p>Total SKS: <strong>19 SKS</strong></p>
+                <p class="materi-link"><a href="#" target="_blank">Lihat Materi Semester 1</a></p>
+            </div>
+        </div>
+
+        <div class="semester-section">
+            <h2 class="semester-header" data-semester="2">
+                Semester 2
+                <span class="dropdown-icon">&#9660;</span>
+            </h2>
+            <div class="semester-content" id="semester-2-content">
+                <div class="matkul-list">
+                    <ul>
+                        <li><strong>Kalkulus II</strong> (3 SKS), prasyarat: Kalkulus I</li>
+                        <li><strong>Algoritma dan Struktur Data</strong> (3 SKS), prasyarat: Dasar Pemrograman</li>
+                        <li><strong>Matematika Diskrit</strong> (3 SKS), prasyarat: Logika Informatika</li>
+                        <li><strong>Basis Data</strong> (3 SKS), prasyarat: Literasi TI</li>
+                        <li><strong>Pendidikan Kewarganegaraan</strong> (2 SKS), prasyarat: Pancasila</li>
+                        <li><strong>Agama</strong> (2 SKS)</li>
+                        <li><strong>Pendidikan Anti Korupsi</strong> (1 SKS)</li>
+                        <li><strong>Perilaku Organisasi</strong> (2 SKS)</li>
+                    </ul>
+                </div>
+                <p>Total SKS: <strong>19 SKS</strong></p>
+                <p class="materi-link"><a href="#" target="_blank">Lihat Materi Semester 2</a></p>
+            </div>
+        </div>
+
+        <div class="semester-section">
+            <h2 class="semester-header" data-semester="3">
+                Semester 3
+                <span class="dropdown-icon">&#9660;</span>
+            </h2>
+            <div class="semester-content" id="semester-3-content">
+                <div class="matkul-list">
+                    <ul>
+                        <li><strong>Aljabar Linier dan Matriks</strong> (3 SKS), prasyarat: Kalkulus I dan II</li>
+                        <li><strong>Pemrograman Sistem</strong> (3 SKS), prasyarat: Alstrukdat</li>
+                        <li><strong>Pemrograman Berorientasi Objek / PBO</strong> (3 SKS), prasyarat: Dasar Pemrograman dan Alstrukdat</li>
+                        <li><strong>Rekayasa Perangkat Lunak / RPL</strong> (3 SKS), prasyarat: Basis Data, Logika Informatika, Dasar Pemrograman</li>
+                        <li><strong>Sistem Digital</strong> (3 SKS), prasyarat: Logika Informatika</li>
+                        <li><strong>Arsitektur dan Organisasi Komputer</strong> (3 SKS), prasyarat: Sistem Digital dan Literasi TI</li>
+                        <li><strong>Statistika dan Probabilitas</strong> (2 SKS)</li>
+                    </ul>
+                </div>
+                <p>Total SKS: <strong>20 SKS</strong></p>
+                <p class="materi-link"><a href="#" target="_blank">Lihat Materi Semester 3</a></p>
+            </div>
+        </div>
+
+        <div class="semester-section">
+            <h2 class="semester-header" data-semester="4">
+                Semester 4
+                <span class="dropdown-icon">&#9660;</span>
+            </h2>
+            <div class="semester-content" id="semester-4-content">
+                <div class="matkul-list">
+                    <ul>
+                        <li><strong>Analisa Numerik</strong> (2 SKS), prasyarat: Aljabar Linier dan Matriks</li>
+                        <li><strong>Jaringan Komputer</strong> (3 SKS), prasyarat: Aljabar Linier dan Matriks</li>
+                        <li><strong>Pemodelan dan Simulasi</strong> (3 SKS), prasyarat: Aljabar Linier dan Matriks</li>
+                        <li><strong>Pemrograman Web</strong> (3 SKS), prasyarat: Alstrukdat, Dasar Pemrograman, RPL, dan PBO</li>
+                        <li><strong>Keamanan Informasi</strong> (3 SKS), prasyarat: RPL</li>
+                        <li><strong>Sistem Informasi</strong> (3 SKS), prasyarat: RPL dan Basis Data</li>
+                        <li><strong>Sistem Operasi</strong> (3 SKS), prasyarat: Alstrukdat, Dasar Pemrograman, dan Arsitektur Komputer</li>
+                    </ul>
+                </div>
+                <p>Total SKS: <strong>20 SKS</strong></p>
+                <p class="materi-link"><a href="#" target="_blank">Lihat Materi Semester 4</a></p>
+            </div>
+        </div>
+
+        <div class="semester-section">
+            <h2 class="semester-header" data-semester="5">
+                Semester 5
+                <span class="dropdown-icon">&#9660;</span>
+            </h2>
+            <div class="semester-content" id="semester-5-content">
+                <div class="matkul-list">
+                    <ul>
+                        <li><strong>Data Science</strong> (3 SKS), prasyarat: Basis Data, Statistika, dan Aljabar Linier</li>
+                        <li><strong>Pengembangan Aplikasi Berbasis Platform</strong> (2 SKS), prasyarat: Alstrukdat, PBO, RPL, dan Jaringan</li>
+                        <li><strong>Kecerdasan Buatan</strong> (3 SKS), prasyarat: Matematika Diskrit, Logika Informatika, dan Pemodelan & Simulasi</li>
+                        <li><strong>Teori Bahasa dan Otomata</strong> (3 SKS), prasyarat: Matematika Diskrit, Logika Informatika, dan Pemodelan & Simulasi</li>
+                        <li><strong>Komputasi Awan</strong> (2 SKS), prasyarat: Jaringan dan Sistem Operasi</li>
+                        <li><strong>Pemrosesan Data Terdistribusi</strong> (3 SKS), prasyarat: Jaringan dan Sistem Operasi</li>
+                        <li><strong>Teori Informasi</strong> (3 SKS), prasyarat: Statistika dan Probabilitas</li>
+                        <li><strong>Interaksi Manusia dan Komputer (IMK)</strong> (2 SKS) <span class="keterangan-tambahan">(bisa diambil di semester 3)</span>, prasyarat: Literasi TI</li>
+                    </ul>
+                </div>
+                <p>Total SKS: <strong>21 SKS</strong></p>
+                <p class="materi-link"><a href="#" target="_blank">Lihat Materi Semester 5</a></p>
+            </div>
+        </div>
+
+        <div class="semester-section">
+            <h2 class="semester-header" data-semester="6">
+                Semester 6
+                <span class="dropdown-icon">&#9660;</span>
+            </h2>
+            <div class="semester-content" id="semester-6-content">
+                <div class="matkul-list">
+                    <ul>
+                        <li><strong>Grafika Komputer</strong> (3 SKS), prasyarat: IMK, Alstrukdat, Aljabar Linier</li>
+                        <li><strong>Pembelajaran Mesin</strong> (3 SKS), prasyarat: Statistika dan Aljabar Linier</li>
+                        <li><strong>Etika Profesi</strong> (1 SKS) <span class="keterangan-tambahan">(bisa diambil di semester 4)</span></li>
+                        <li><strong>Metodologi Penelitian</strong> (2 SKS), prasyarat: Statistika</li>
+                        <li><strong>Sosioteknologi Informasi</strong> (3 SKS) <span class="keterangan-tambahan">(bisa diambil di semester 4)</span>, prasyarat: Perilaku Organisasi</li>
+                        <li>3 Mata kuliah pilihan (masing-masing 3 SKS), dipilih berdasarkan Kelompok Keahlian (KK)</li>
+                    </ul>
+                </div>
+                <p>Total SKS: <strong>20 SKS</strong></p>
+                <p><strong>Kelompok Keahlian (KK) dan pilihan mata kuliah:</strong></p>
+                <ul>
+                    <li><strong>TMG</strong> (Teknologi Multimedia dan Game): Sistem Multimedia, Animasi Komputer, Database Multimedia</li>
+                    <li><strong>ISI</strong> (Intelligent Systems and Informatics): Pemrosesan Bahasa Alami, Rekayasa Data, Representasi Pengetahuan dan Penalaran</li>
+                    <li><strong>JKF</strong> (Jaringan dan Keamanan Forensik): Digital Forensics, Ethical Hacking, Software Defined Network (SDN)</li>
+                </ul>
+                <p class="materi-link"><a href="#" target="_blank">Lihat Materi Semester 6</a></p>
+            </div>
+        </div>
+
+        <div class="semester-section">
+            <h2 class="semester-header" data-semester="7">
+                Semester 7
+                <span class="dropdown-icon">&#9660;</span>
+            </h2>
+            <div class="semester-content" id="semester-7-content">
+                <div class="matkul-list">
+                    <ul>
+                        <li><strong>Kuliah Kerja Nyata</strong> (2 SKS), prasyarat: Telah menempuh 100 SKS</li>
+                        <li><strong>Kerja Praktek</strong> (2 SKS), prasyarat: Telah menempuh 110 SKS</li>
+                        <li><strong>Pengujian dan Implementasi Sistem</strong> (3 SKS) <span class="keterangan-tambahan">(bisa diambil di semester 5)</span>, prasyarat: Perilaku Organisasi</li>
+                        <li><strong>Penulisan Ilmiah</strong> (2 SKS), prasyarat: RPL</li>
+                        <li><strong>Manajemen Proyek Perangkat Lunak</strong> (2 SKS) <span class="keterangan-tambahan">(bisa diambil di semester 5)</span>, prasyarat: Metodologi Penelitian</li>
+                        <li>3 Mata kuliah pilihan (masing-masing 3 SKS), sesuai KK yang dipilih</li>
+                    </ul>
+                </div>
+                <p>Total SKS: <strong>19 SKS</strong></p>
+                <p><strong>Mata kuliah pilihan semester 7 berdasarkan KK:</strong></p>
+                <ul>
+                    <li>TMG: Rekayasa Sistem Multimedia, Rekayasa Game, Pengolahan Citra</li>
+                    <li>ISI: Deep Learning, Evolusi Perangkat Lunak, Visi Komputer dan Robotika</li>
+                    <li>JKF: IoT, Keamanan dan Penjaminan Informasi, Malware Analysis</li>
+                </ul>
+                <p class="materi-link"><a href="#" target="_blank">Lihat Materi Semester 7</a></p>
+            </div>
+        </div>
+
+        <div class="semester-section">
+            <h2 class="semester-header" data-semester="8">
+                Semester 8
+                <span class="dropdown-icon">&#9660;</span>
+            </h2>
+            <div class="semester-content" id="semester-8-content">
+                <div class="matkul-list">
+                    <ul>
+                        <li><strong>Tugas Akhir / Skripsi</strong> (6 SKS), prasyarat: Telah menempuh minimal 138 SKS</li>
+                    </ul>
+                </div>
+                <p>Total SKS: <strong>6 SKS</strong></p>
+                <p class="materi-link"><a href="#" target="_blank">Lihat Materi Semester 8</a></p>
+            </div>
         </div>
         <p class="encouragement">Bismillah bisa lewatin semua dan lancar selalu, aamiin!</p>
     </div>
+
+    <div class="dosen-kk-section">
+            <h2 class="dosen-kk-header">
+                Dosen Berdasarkan Kelompok Keahlian (KK)
+                <span class="dropdown-icon">&#9660;</span>
+            </h2>
+            <div class="dosen-kk-content">
+                <h3>Teknologi Multimedia dan Game (TMG)</h3>
+                <div class="dosen-list">
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakeka.png" alt="Foto Dosen TMG 1" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Dr. Ir. Eka Wahyu Hidayat, S.T., M.T., MCE</h4>
+                            <p>Spesialisasi: Grafika Komputer, Animasi 3D</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakreza.png" alt="Foto Dosen TMG 2" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Ir. R Reza El Akbar S.Si, M.T., M.Kom.</h4>
+                            <p>Spesialisasi: Desain Game, Interaksi Manusia Komputer</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakadi.png" alt="Foto Dosen ISI 1" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Muhammad Adi Khairul Anshary, S.T., M.T</h4>
+                            <p>Spesialisasi: Pembelajaran Mesin, Data Mining</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/bueuis.png" alt="Foto Dosen ISI 2" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Euis Nur Fitriani Dewi, S.T., M.Kom.</h4>
+                            <p>Spesialisasi: Kecerdasan Buatan, Natural Language Processing</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakhenhen.png" alt="Foto Dosen ISI 1" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Hen Hen Lukmana, M.Kom.</h4>
+                            <p>Spesialisasi: Pembelajaran Mesin, Data Mining</p>
+                        </div>
+                    </div>
+                    </div>
+
+                <h3>Intelligent Systems and Informatics (ISI)</h3>
+                <div class="dosen-list">
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakaradea.png" alt="Foto Dosen ISI 1" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Dr. Ir. Aradea, S.T., M.T.</h4>
+                            <p>Spesialisasi: Pembelajaran Mesin, Data Mining</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakhusni.png" alt="Foto Dosen ISI 2" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Husni Mubarok, S.TP., M.T</h4>
+                            <p>Spesialisasi: Kecerdasan Buatan, Natural Language Processing</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/buika.png" alt="Foto Dosen ISI 1" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Neng Ika Kurniati., S.T., M.T.</h4>
+                            <p>Spesialisasi: Pembelajaran Mesin, Data Mining</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakrianto.png" alt="Foto Dosen ISI 2" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Ir. Rianto, S.T., M.T</h4>
+                            <p>Spesialisasi: Kecerdasan Buatan, Natural Language Processing</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/buirani.png" alt="Foto Dosen ISI 1" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Irani Hoeronis, S.Si., M.T., CRP., CIISA.</h4>
+                            <p>Spesialisasi: Pembelajaran Mesin, Data Mining</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/busiti.png" alt="Foto Dosen ISI 2" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Siti Yuliyanti, S.T., M.Kom.</h4>
+                            <p>Spesialisasi: Kecerdasan Buatan, Natural Language Processing</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakvega.png" alt="Foto Dosen ISI 1" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Vega Purwayoga, S.Kom., M.Kom.</h4>
+                            <p>Spesialisasi: Pembelajaran Mesin, Data Mining</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakal.png" alt="Foto Dosen ISI 2" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Muhammad Al Husaini, S.T., M.Kom</h4>
+                            <p>Spesialisasi: Kecerdasan Buatan, Natural Language Processing</p>
+                        </div>
+                    </div>
+                    </div>
+
+                <h3>Jaringan dan Keamanan Forensik (JKF)</h3>
+                <div class="dosen-list">
+                    <div class="dosen-card">
+                        <img src="assets/dosen/paknur.png" alt="Foto Dosen JKF 1" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Dr. Ir. Nur Widiyasono, S.Kom., M.Kom., CEH., CHFI., MCE., CITAP</h4>
+                            <p>Spesialisasi: Keamanan Jaringan, Kriptografi</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakrohmat.png" alt="Foto Dosen JKF 2" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Rohmat Gunawan, S.T., M.T., MCE</h4>
+                            <p>Spesialisasi: Forensik Digital, Sistem Terdistribusi</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakfirmansyah.png" alt="Foto Dosen ISI 1" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Ir. Firmansyah Maulana Sugiartana Nursuwars, S.T., M.Kom.</h4>
+                            <p>Spesialisasi: Pembelajaran Mesin, Data Mining</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakalam.png" alt="Foto Dosen ISI 2" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Ir. Alam Rahmatulloh, S.T., M.T., MCE., IPM.</h4>
+                            <p>Spesialisasi: Kecerdasan Buatan, Natural Language Processing</p>
+                        </div>
+                    </div>
+                    <div class="dosen-card">
+                        <img src="assets/dosen/pakrandi.png" alt="Foto Dosen ISI 1" class="dosen-foto">
+                        <div class="dosen-info">
+                            <h4>Randi Rizal, S.T., M.Kom., CEH., CHFI.</h4>
+                            <p>Spesialisasi: Pembelajaran Mesin, Data Mining</p>
+                        </div>
+                    </div>
+                    </div>
+                <p class="note">Hayooo, mau masuk ke kk mana nihhh!!!.</p>
+            </div>
+        </div>
+        </div>
 
     <img src="balon.hehe.webp" id="gifMelayang" class="gif-melayang" alt="GIF Melayang">
 
