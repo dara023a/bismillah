@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        const fullText = `Selamat, ${DEFAULT_FRIEND_NAME}! IPK-mu Naik Drastis! 🎉`;
+        const fullText = `Sedikit Ucapan (banyak deng)`;
 
         const celebrationTextElement = document.getElementById('celebrationText');
         if (celebrationTextElement) {
@@ -495,6 +495,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 ipkResultSpan.textContent = ipkKumulatif.toFixed(2);
             } else {
                 ipkResultSpan.textContent = '-';
+            }
+        });
+    }
+});
+
+// --- Logika Dropdown Semester ---
+document.addEventListener('DOMContentLoaded', () => {
+    const semesterHeaders = document.querySelectorAll('.semester-header');
+
+    semesterHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling; // Dapatkan konten semester
+            
+            // Toggle kelas 'active' pada header
+            header.classList.toggle('active');
+            
+            // Toggle kelas 'show' pada konten untuk transisi
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                content.style.maxHeight = '0'; // Atur kembali ke 0
+            } else {
+                content.classList.add('show');
+                // Atur maxHeight ke scrollHeight agar transisi berjalan mulus
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        });
+    });
+
+    const dosenKKHeader = document.querySelector('.dosen-kk-header');
+    if (dosenKKHeader) { // Pastikan elemen ditemukan
+        dosenKKHeader.addEventListener('click', () => {
+            const content = dosenKKHeader.nextElementSibling;
+            
+            dosenKKHeader.classList.toggle('active');
+            
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                content.style.maxHeight = '0';
+            } else {
+                content.classList.add('show');
+                // Gunakan scrollHeight untuk memastikan semua konten terlihat
+                content.style.maxHeight = content.scrollHeight + 'px';
             }
         });
     }
